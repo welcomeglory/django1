@@ -46,4 +46,4 @@ def member_view(request):
 
 def member_list(request):
     members = Member.objects.all()  # 모든 Member 데이터를 가져오기
-    return render(request, 'member_list.html', {'members': members})
+    return render(request, 'list_member.html', {'members': members})

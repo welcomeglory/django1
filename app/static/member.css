@@ -1,8 +1,7 @@
-/* style.css */
-
+/* 전체 바디 스타일 */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f2f5;
     margin: 0;
     padding: 0;
     display: flex;
@@ -11,57 +10,81 @@ body {
     height: 100vh;
 }
 
+/* 컨테이너 스타일 */
 .container {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: 20px;
 }
 
+/* 제목 스타일 */
 h2 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    color: #333;
+    font-size: 24px;
+    font-weight: 600;
 }
 
+/* 폼 스타일 */
 form {
     display: flex;
     flex-direction: column;
 }
 
-form p {
-    margin-bottom: 15px;
+/* 폼 그룹 스타일 */
+.form-group {
+    margin-bottom: 20px;
 }
 
-form label {
-    font-weight: bold;
-    margin-bottom: 5px;
+.form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #555;
 }
 
-form input[type="text"],
-form input[type="email"],
-form input[type="password"],
-form input[type="tel"],
-form select,
-form textarea {
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="tel"],
+.form-group select,
+.form-group textarea {
     width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-form button {
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    padding: 12px;
+    margin-top: 4px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
     font-size: 16px;
+    box-sizing: border-box;
 }
 
-form button:hover {
+/* 버튼 스타일 */
+button {
+    padding: 12px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
     background-color: #0056b3;
+    transform: scale(1.02);
+}
+
+/* 반응형 스타일 */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
 }
